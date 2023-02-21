@@ -24,12 +24,12 @@ def clean_runtime(input_time):
     runtime_int = int(runtime_split)
     return runtime_int
 
-def create_movies_csv():
+def create_movies_csv(oscar_winners_csv):
     with open('movies.csv', 'w', newline='') as movies_csv:
         fieldnames = ['movie_title','runtime','genre','award_wins','award_nominations','box_office']
         writer = csv.DictWriter(movies_csv, fieldnames=fieldnames)
         writer.writeheader()
-        with open('oscar_winners.csv') as winners_csv:
+        with open(oscar_winners_csv) as winners_csv:
             winners_data = csv.reader(winners_csv)
             next(winners_data) #skips header row
             for row in winners_data:
