@@ -1,3 +1,4 @@
-import requests
-import csv
-from api_key import omdb_key
+from functions import *
+
+if __name__ == '__main__':
+    create_movies_csv()

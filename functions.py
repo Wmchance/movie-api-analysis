@@ -43,4 +43,3 @@ def create_movies_csv():
                     fieldnames[5]: clean_box_office(res.json()['BoxOffice'])
                 })
 
-create_movies_csv()
